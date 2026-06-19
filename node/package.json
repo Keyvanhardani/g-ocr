@@ -1,0 +1,19 @@
+{
+  "name": "g-ocr",
+  "version": "0.2.0",
+  "description": "GOCR — small, CPU OCR: document -> text + bounding boxes as JSON. ~30 MB, no GPU. Node port of the g-ocr Python package.",
+  "main": "index.js",
+  "bin": { "g-ocr": "cli.js" },
+  "type": "commonjs",
+  "files": ["index.js", "cli.js", "README.md"],
+  "keywords": ["ocr", "german", "deutsch", "document", "invoice", "onnx", "cpu", "bbox", "text-recognition"],
+  "author": "Keyvan Hardani",
+  "license": "Apache-2.0",
+  "homepage": "https://german-ocr.de",
+  "repository": { "type": "git", "url": "git+https://github.com/Keyvanhardani/g-ocr.git" },
+  "dependencies": {
+    "onnxruntime-node": "^1.18.0",
+    "sharp": "^0.33.5"
+  },
+  "engines": { "node": ">=18" }
+}

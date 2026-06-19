@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "g-ocr"
+version = "0.2.0"
+description = "GOCR — schnelle, kleine deutsche OCR-/Vision-Schicht für Dokumente (CPU, kein GPU): ganzes Dokument → Text + Position (bbox) als JSON. Bilder + PDF."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "Apache-2.0"
+authors = [{ name = "Keyvan Hardani" }]
+keywords = ["ocr", "german", "deutsch", "document", "invoice", "rechnung", "bbox", "onnx", "cpu"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Image Recognition",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "onnxruntime>=1.16",
+  "numpy",
+  "opencv-python-headless",
+  "Pillow",
+  "pyclipper",
+  "shapely",
+  "huggingface_hub",
+]
+
+[project.optional-dependencies]
+pdf = ["pypdfium2>=4"]
+all = ["pypdfium2>=4"]
+
+[project.urls]
+Homepage = "https://german-ocr.de"
+Source = "https://github.com/Keyvanhardani/g-ocr"
+
+[project.scripts]
+g-ocr = "g_ocr.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["g_ocr*"]
+
+[tool.setuptools.package-data]
+g_ocr = ["assets/*.txt"]

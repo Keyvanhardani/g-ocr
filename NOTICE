@@ -1,0 +1,23 @@
+GOCR (g-ocr)
+Copyright (c) 2026 Keyvan Hardani / german-ocr.de
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Third-party software and models
+-------------------------------
+This product is built on the following Apache-2.0 works; their copyright
+and license notices are retained:
+
+* OpenOCR  -  https://github.com/Topdu/OpenOCR
+  Apache License 2.0. GOCR's detector (DB-based) and recognizer
+  (RepSVTR / SVTR-family, "KSVTRv3") are built on OpenOCR models and
+  its training framework.
+
+* PaddleOCR  -  https://github.com/PaddlePaddle/PaddleOCR
+  Apache License 2.0. The recognizer character dictionary
+  (ppocr_keys_v1.txt) originates from PaddleOCR.
+
+Modifications by GOCR: ONNX export, packaging, and a German-specialized
+recognizer (KSVTRv3-de) trained by GOCR on German corpora + domain data.
+The upstream components above are used under Apache-2.0 with attribution
+retained.
